@@ -3,16 +3,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Calculator</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id = 'header'></div>
         <h1>Calculator</h1>
-    <div id = 'center'></div>
-        <div id = 'resultBar'></div>
+    <div id = 'center'>
+        <div id = 'screen'>result</div>
+        
         <div id = 'buttons'>
-            <button id = 'but7'>7</button>
+            <div id = 'clear'>
+                <button id = 'clearb'>AC</button>
+                
+            </div>
+            <div id = 'digits'>
+                <button id = 'but7'>7</button>
+                <button id = 'but8'>8</button>
+                <button id = 'but9'>9</button>
+                <button id = 'but4'>4</button>
+                <button id = 'but5'>5</button>
+                <button id = 'but6'>6</button>
+                <button id = 'but1'>1</button>
+                <button id = 'but2'>2</button>
+                <button id = 'but3'>3</button>
+                <button id = 'but0'>0</button>
+                <button id = 'operate'>=</button>
+            </div>
+            <div id = 'operands'>
+                <button id = 'decimal'>.</button>
+                <button id = 'add'>+</button>
+                <button id = 'sub'>-</button>
+                <button id = 'mlt'>x</button>
+                <button id = 'div'>/</button>
+                
+            </div>  
         </div>
+    </div> 
     <div id = 'footer'></div>
 
     <script src= "calc.js"></script>
