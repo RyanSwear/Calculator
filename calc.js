@@ -20,6 +20,9 @@ function init(){
         ops[i].addEventListener('click', function() {opPressed(screen, ops[i].innerText)});
         
     }
+
+    eq = document.getElementById('operate')
+    eq.addEventListener('click', function() {evalPressed(screen)})
     //but7 = document.getElementById('but7');
     //but7.addEventListener('click', digitPressed(screen));
 }
@@ -35,9 +38,30 @@ function digitPressed(screen, number){
 
 function opPressed(screen, operand)
 {
+    if(noReset){
+    calcs.push(screen.innerText)
     screen.innerText = '';
     operands.push(operand);
     console.log(operands);
+    noReset = false;
+    }
+}
+
+function evalPressed(screen)
+{
+    calcs.push(screen.innerText)
+    let evaluation = '';
+    //screen.innerText = eval(evaluation);
+
+    for (let i = 0; i < operands.length; i++)
+    {
+        evaluation = evaluation + calcs.shift() + operands.shift()
+    }
+    evaluation = evaluation + calcs.shift()
+    screen.innerText = eval(evaluation);
+    console.log(evaluation);
+    calcs.push(screen.innerText);
+
 }
 
 
